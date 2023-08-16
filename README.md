@@ -4,3 +4,4 @@ API:
 /restaurant/menu/\<int:pk\>  
 /restaurant/booking/tables/  
 /restaurant/booking/tables/\<int:pk\>  
+/restaurant/api-token-auth/  
