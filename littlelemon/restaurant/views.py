@@ -29,6 +29,8 @@ class SingleMenuItemView(generics.RetrieveUpdateAPIView, generics.DestroyAPIView
     
     def get_permissions(self):
         permission_classes = [IsAuthenticated]
+        if self.request.method == "GET":
+            permission_classes = []
         if self.request.method in ["PATCH", "DELETE"]:
             permission_classes = [IsAuthenticated, IsAdminUser]
         return [permission() for permission in permission_classes]
@@ -38,4 +40,3 @@ class BookingViewSet(ModelViewSet):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
     permission_classes = [IsAuthenticated]
-
