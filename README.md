@@ -1,2 +1,4 @@
 # LittleLemon
-first commit
+API:
+/restaurant/menu/
+/restaurant/booking/tables/
